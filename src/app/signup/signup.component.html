@@ -1,0 +1,35 @@
+<nav class="navber navbar-light bg-primary">
+  <div class="container-fluid">
+      <h1>Admin panel</h1>
+      <div class="flex">
+          <button style="margin: 0%;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add
+            </button>
+      </div>
+  </div>
+</nav>
+<table class="table" style="color: black;">
+  <thead>
+      <tr>
+          <th scope="col">Poetry</th>
+       
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let row of edata">
+          <td>{{row.username}}</td>
+          <td style="width: auto;">
+              
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+        <form [formGroup]="formvalue" >
+          <input type="text" placeholder="poetry" formControlName="username">
+          <button type="button" (click)="postuser()" class="btn btn-primary">Add</button>
+        </form>
+       
+        <p>Translate this page:</p>
+
+<div id="google_translate_element"></div>
